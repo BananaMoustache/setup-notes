@@ -4,12 +4,17 @@ Run the following command to verify that the required tools are installed and av
 
 ```bash
 for cmd in \
-nmap ffuf sqlmap \
-john hashcat searchsploit \
 subfinder httpx nuclei katana naabu dnsx \
-gau waybackurls arjun
+nmap ffuf sqlmap arjun \
+gau waybackurls \
+amass feroxbuster \
+whatweb wafw00f masscan \
+dalfox trufflehog gitleaks \
+mitmproxy jq tmux \
+msfconsole searchsploit hashcat john \
+wireshark
 do
-    printf "%-15s" "$cmd"
+    printf "%-18s" "$cmd"
     command -v "$cmd" || echo "NOT FOUND"
 done
 ```
